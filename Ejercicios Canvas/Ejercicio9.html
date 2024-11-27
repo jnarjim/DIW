@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar un Triángulo</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="triangulo" width="300" height="200"></canvas>
+    
+    <script>
+
+        let triangleCanvas = document.getElementById('triangulo');
+        let ctx = triangleCanvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+
+        ctx.beginPath(); 
+        ctx.moveTo(50, 50);
+        ctx.lineTo(200, 50);
+        ctx.lineTo(50, 150);
+        ctx.closePath();
+        ctx.fill();
+        
+    </script>
+</body>
+</html>
