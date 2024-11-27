@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1</title>
+    <title>Ejercicio 6</title>
     <style>
         canvas {
             border: 1px solid black;
@@ -11,18 +11,18 @@
     </style>
 </head>
 <body>
-    <canvas id="linea" width="400" height="400"></canvas>
+    <canvas id="elipse" width="400" height="200"></canvas>
+    
     <script>
 
-        let canvas = document.getElementById('linea');
-        let ctx = canvas.getContext('2d');
-        ctx.strokeStyle = 'red';
-        ctx.lineWidth = 5;
+        let elipseCanvas = document.getElementById('elipse');
+        let ctx = elipseCanvas.getContext('2d');
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 2;
         ctx.beginPath();
-        ctx.moveTo(50, 50);
-        ctx.lineTo(350, 350);
+        ctx.ellipse(200, 100, 100, 60, 0, 0, 2 * Math.PI); 
         ctx.stroke();
-        
+
     </script>
 </body>
 </html>

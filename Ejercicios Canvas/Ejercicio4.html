@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibujar una Circunferencia</title>
+    <title>Ejercicio 4</title>
     <style>
         canvas {
             border: 1px solid black;
@@ -14,16 +14,15 @@
     <canvas id="circulo" width="400" height="400"></canvas>
     
     <script>
+
         let circleCanvas = document.getElementById('circulo');
         let ctx = circleCanvas.getContext('2d');
-        
         ctx.strokeStyle = 'red';
         ctx.lineWidth = 2;
-        
         ctx.beginPath();
         ctx.arc(200, 200, 100, 0, 2 * Math.PI);
         ctx.stroke();
-        
+
     </script>
 </body>
 </html>
