@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesto Canvas</title>
+    <script type="text/javascript">
+        function dibujarCanvas() {
+            let canvas = document.getElementById('paisaje');
+            let ctx = canvas.getContext('2d');
+            ctx.strokeRect(0, 0, 550, 350);
+
+            let gradienteCielo = ctx.createLinearGradient(0, 0, 0, 200);
+            gradienteCielo.addColorStop(0, "cornflowerblue");
+            gradienteCielo.addColorStop(1, "white");
+            ctx.fillStyle = gradienteCielo;
+            ctx.fillRect(0, 0, 550, 200);
+
+            let gradienteSuelo = ctx.createLinearGradient(0, 250, 0, 350);
+            gradienteSuelo.addColorStop(0, "darkgreen");
+            gradienteSuelo.addColorStop(1, "lightgreen");
+            ctx.fillStyle = gradienteSuelo;
+            ctx.fillRect(0, 250, 550, 100);
+
+            var gradienteMontañas = ctx.createLinearGradient(0, 250, 0, 100);
+            gradienteMontañas.addColorStop(0, "saddlebrown");
+            gradienteMontañas.addColorStop(1, "sandybrown");
+            ctx.fillStyle = gradienteMontañas;
+
+            ctx.beginPath();
+            ctx.moveTo(0, 250);
+            ctx.lineTo(100, 120);
+            ctx.lineTo(200, 180);
+            ctx.lineTo(300, 100);
+            ctx.lineTo(400, 170);
+            ctx.lineTo(500, 80);
+            ctx.lineTo(550, 250);
+            ctx.closePath();
+            ctx.fill();
+
+            var gradienteNube = ctx.createRadialGradient(390, 140, 0, 390, 140, 50);
+            gradienteNube.addColorStop(0, "blue");
+            gradienteNube.addColorStop(1, "darkblue");
+            ctx.fillStyle = gradienteNube;
+
+            ctx.beginPath();
+            ctx.arc(340, 140, 40, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(390, 140, 60, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(440, 140, 40, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.strokeStyle = "darkblue";
+            ctx.lineWidth = 2;
+
+            let startY = 220;
+            for (let i = 0; i < 3; i++) { 
+                for (let j = 0; j < 10; j++) { 
+                    let startX = 320 + j * 15;
+                    let endX = startX + 12;
+                    ctx.beginPath();
+                    ctx.moveTo(startX, startY);
+                    ctx.lineTo(endX, startY + 25);
+                    ctx.stroke();
+                }
+                startY += 35;
+            }
+
+            ctx.font = "30px Arial";
+            ctx.fillStyle = "yellow";
+            ctx.fillText("Canvas", 20, 50);
+        }
+    </script>
+</head>
+<body onload="dibujarCanvas();">
+    <canvas id="paisaje" width="550" height="350">Su navegador no soporta Canvas.</canvas>
+</body>
+</html>
