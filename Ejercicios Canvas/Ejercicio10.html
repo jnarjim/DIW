@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="final" width="300" height="200"></canvas>
+    
+    <script>
+
+        let finalCanvas = document.getElementById('final');
+        let ctx = finalCanvas.getContext('2d');
+        ctx.font = 'bold 40px Arial';
+        ctx.fillStyle = 'blue';
+        
+        let text = "Ejercicio Final";
+        let textX = 10;
+        let textY = (finalCanvas.height / 2) + (40 / 2);
+        ctx.fillText(text, textX, textY);
+
+    </script>
+</body>
+</html>
