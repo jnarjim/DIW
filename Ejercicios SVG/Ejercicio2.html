@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paredes {
+            stroke: black;
+            stroke-width: 2px;
+            fill: white;
+        }
+        .tejado {
+            fill: none;
+            stroke: red;
+            stroke-width: 10px;
+            stroke-linecap: round;
+
+        }
+        .puerta {
+            fill: red;
+            stroke:black;
+            stroke-width: 2px;
+
+        }
+        .pomo {
+            fill:white;
+            stroke:black;
+            stroke-width: 2px;
+        }
+        .escaleras {
+            fill:grey;
+            stroke:black;
+            stroke-width: 2px;
+        }
+        .ventana {
+            fill:yellow;
+            stroke:black;
+            stroke-width: 2px;
+        }
+        .bordillo {
+            fill:red;
+            stroke:black;
+            stroke-width: 2px;
+        }
+        .lineas-ventanas {
+            stroke:black;
+            stroke-width: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <svg width="200" heigth="200" viewBox="-100 -100 200 200">
+
+    <!-- Paredes y tejado -->
+        <polygon class="paredes" points="-65,80 -65,-10 0,-70 65,-10 65,80" />
+        <polyline class="tejado" points="-75,-9 0,-78 75,-9" />
+        
+        <!-- Puerta y pomo -->
+        <rect class="puerta" x="-45" y="10" width="30" height="60" rx="2" />
+        <circle class="pomo" cx="-37" cy="42" r="2" />
+
+        <!-- Escaleras -->
+        <rect class="escaleras" x="-47" y="70" width="34" height="5" />
+        <rect class="escaleras" x="-49" y="75" width="38" height="5" />
+
+        <!-- Ventanas y bordillo-->
+        <rect class="ventana" x="5" y="15" width="40" height="35" rx="5" />
+        <circle class="ventana" cx="0" cy="-25" r="15" />
+        <rect class="bordillo" x="3" y="50" width="43" height="5" rx="5"/>
+
+        <!-- Lineas ventana de arriba -->
+        <line class="lineas-ventanas" x1="-15" y1="-25" x2="15" y2="-25" />
+        <line class="lineas-ventanas" x1="0" y1="-40" x2="0" y2="-10" />
+        
+        <!-- Lineas ventana de abajo -->
+        <line class="lineas-ventanas" x1="5" y1="35" x2="45" y2="35" />
+        <line class="lineas-ventanas" x1="25" y1="15" x2="25" y2="50" />
+    </svg>
+    
+</body>
+</html>
