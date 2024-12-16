@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #271616; 
+    color:white ; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: goldenrod;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "FF Mark W05";
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid goldenrod;
+    border-radius: 5px;
+}
+
+audio {
+    display: block;
+    margin: 20px auto;
+    width: 40%;
+    background-color: goldenrod;
+    border-radius: 5px;
+}
